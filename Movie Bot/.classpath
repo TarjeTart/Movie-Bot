@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Eclipse/workspaces/Movie Bot/JDA/JDA-4.2.0_168-withDependencies.jar" sourcepath="D:/Eclipse/workspaces/Movie Bot/JDA/JDA-4.2.0_168-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/Eclipse/workspaces/Movie%20Bot/JDA/JDA-4.2.0_168-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
