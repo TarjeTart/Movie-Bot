@@ -48,7 +48,7 @@ public class ListMoviesCommand implements Command{
 		}
 		EmbedBuilder eb = new EmbedBuilder();
 		eb.setTitle(listUser.getName() + "'s Movie List:").setThumbnail(listUser.getAvatarUrl()).setColor(Color.BLUE);
-		for(int i = 0; i < 15; i++) {
+		for(int i = 0; i < (watcher.movies.size()<15 ? watcher.movies.size() : 15); i++) {
 			eb.addField(String.valueOf(i+1) + ".",watcher.movies.get(i),true);
 		}
 		Message botMessage = channel.sendMessage(eb.build()).complete();

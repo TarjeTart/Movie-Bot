@@ -100,6 +100,8 @@ public class MessageRecieved {
 				changeWebsiteCommand.run();
 			else if(bulkAddCommand.check())
 				bulkAddCommand.run();
+			else if(moviePingsCommand.check())
+				moviePingsCommand.run();
 		}else {
 			if(moviePingsCommand.check()) {
 				moviePingsCommand.run();
