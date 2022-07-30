@@ -17,7 +17,7 @@ import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEve
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 public class Driver extends ListenerAdapter{
-	//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
+	
 	/*
 	 *ToDO:
 	 *
