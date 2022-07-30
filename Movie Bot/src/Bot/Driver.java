@@ -20,26 +20,28 @@ public class Driver extends ListenerAdapter{
 	
 	/*
 	 *ToDO:
-	 *
+	 *improve comments
 	 */
 	
+	//initialize public static variables
 	public static String token;
 	public static Pattern prefix;
 	public static Map<String,MovieWatcher> watchersMap = new HashMap<String, MovieWatcher>();
 	public static JdaMaker jdaMaker;
 	public static String location = 
 			System.getProperty("user.dir").equals("D:\\Eclipse\\git\\Movie-Bot\\Movie Bot")
-			? "D:\\Eclipse\\Movie Bot Data\\" : "C:\\Users\\Austin Remote\\Desktop\\Movie Bot\\Movie Bot Data\\";
-	public static String moviePingsId = location.equals("C:\\Users\\Austin Remote\\Desktop\\Movie Bot\\Movie Bot Data\\") ? "796957621604974603" : "764983979560140831";//real : test
+			? "D:\\Eclipse\\Movie Bot Data\\" : "";
+	public static String moviePingsId = location.equals("") ? "796957621604974603" : "764983979560140831";//real : test
 	public static String myID = "251761821885792256";
 	public static String botTestingId = "512859462307151872";
-	public static String movieChannel = location.equals("C:\\Users\\Austin Remote\\Desktop\\Movie Bot\\Movie Bot Data\\") ? "788932342214426635" : "862787306167861279";
-	public static String version = "3.3.7";
+	public static String movieChannel = location.equals("") ? "788932342214426635" : "862787306167861279";
+	public static String version = "3.3.6";
 	public static String website;
 	private static int MAX_MESSAGESAVES = 1000;
 	public static Map<String,ReactedMessageSave> messageSaves = new LinkedHashMap<String,ReactedMessageSave>(){
 		private static final long serialVersionUID = 1L;
 		@Override
+		//limit map size to MAX_MESSAGESAVES
 		protected boolean removeEldestEntry(Map.Entry<String,ReactedMessageSave> eldest) {
 			return this.size() > MAX_MESSAGESAVES;
 		}
@@ -65,22 +67,27 @@ public class Driver extends ListenerAdapter{
 		//create bot
 		jdaMaker.constructJda();
 
+		//log location var and bot version to user
 		System.out.println("Location var set to " + location);
 		System.out.println("Running bot version: " + version);
 		
 	}
 
+	//fires whenever the bot recieves a private or guild message
 	@Override
     public void onMessageReceived(MessageReceivedEvent event) {
         new MessageRecieved(event);
     }//ends message received event 
 	
+	//fires whenever a message visible to the bot has a reaction added
 	public void onGuildMessageReactionAdd(GuildMessageReactionAddEvent event) {
+		//checks if reaction is from bot
 		if(event.getUser().isBot())
 			return;
 		new MessageReactionAdd(event);
 	}
 	
+	//loads ban list
 	public static boolean getBans() {
 		File file = new File(location + "bans.txt");
 		try {
@@ -112,6 +119,7 @@ public class Driver extends ListenerAdapter{
 		return true;
 	}
 	
+	//loads movie list
 	private static boolean getMovies() {
 		File file = new File(location + "MovieData.txt");
 		try {
@@ -134,5 +142,5 @@ public class Driver extends ListenerAdapter{
 		}
 		return true;
 	}
-	
+
 }

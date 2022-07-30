@@ -6,9 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Austin Remote/Desktop/Movie Bot/jda/JDA-4.2.0_168-withDependencies.jar" sourcepath="C:/Users/Austin Remote/Desktop/Movie Bot/jda/JDA-4.2.0_168-sources.jar">
+	<classpathentry kind="lib" path="D:/Eclipse/workspaces/Movie Bot/JDA/JDA-4.2.0_168-withDependencies.jar" sourcepath="D:/Eclipse/workspaces/Movie Bot/JDA/JDA-4.2.0_168-sources.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/Austin%20Remote/Desktop/Movie%20Bot/jda/JDA-4.2.0_168-javadoc.jar!/"/>
+			<attribute name="javadoc_location" value="jar:file:/D:/Eclipse/workspaces/Movie%20Bot/JDA/JDA-4.2.0_168-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
