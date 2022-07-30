@@ -29,12 +29,12 @@ public class Driver extends ListenerAdapter{
 	public static JdaMaker jdaMaker;
 	public static String location = 
 			System.getProperty("user.dir").equals("D:\\Eclipse\\git\\Movie-Bot\\Movie Bot")
-			? "D:\\Eclipse\\Movie Bot Data\\" : "";
-	public static String moviePingsId = location.equals("") ? "796957621604974603" : "764983979560140831";//real : test
+			? "D:\\Eclipse\\Movie Bot Data\\" : "C:\\Users\\Austin Remote\\Desktop\\Movie Bot\\Movie Bot Data\\";
+	public static String moviePingsId = location.equals("C:\\Users\\Austin Remote\\Desktop\\Movie Bot\\Movie Bot Data\\") ? "796957621604974603" : "764983979560140831";//real : test
 	public static String myID = "251761821885792256";
 	public static String botTestingId = "512859462307151872";
-	public static String movieChannel = location.equals("") ? "788932342214426635" : "862787306167861279";
-	public static String version = "3.3.5";
+	public static String movieChannel = location.equals("C:\\Users\\Austin Remote\\Desktop\\Movie Bot\\Movie Bot Data\\") ? "788932342214426635" : "862787306167861279";
+	public static String version = "3.3.7";
 	public static String website;
 	private static int MAX_MESSAGESAVES = 1000;
 	public static Map<String,ReactedMessageSave> messageSaves = new LinkedHashMap<String,ReactedMessageSave>(){
